@@ -1,0 +1,29 @@
+{
+  "name": "expense-tracker",
+  "version": "1.0.0",
+  "description": "tracks ones personal expenses",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anil3007/personal-expense-tracker.git"
+  },
+  "keywords": [
+    "expenses",
+    "tracker"
+  ],
+  "author": "Anil",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Anil3007/personal-expense-tracker/issues"
+  },
+  "homepage": "https://github.com/Anil3007/personal-expense-tracker#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7"
+  }
+}
