@@ -64,7 +64,7 @@ const routes = (db) => {
     router.get("/transactions", async (req, res) => {
         try {
             const transactions = await db.all("SELECT * FROM transactions");
-            res.json({
+            res.status(200).json({
                 Status: "Success",
                 Msg: "Successfully fetched transactions",
                 Data: transactions
@@ -83,7 +83,7 @@ const routes = (db) => {
         try {
             const transaction = await db.get("SELECT * FROM transactions WHERE id = ?", [id]);
             if (transaction) {
-                res.json({
+                res.status(200).json({
                     Status: "Success",
                     Msg: "Successfully fetched transaction",
                     Data: transaction
@@ -117,7 +117,7 @@ const routes = (db) => {
                     Msg: `Transaction with ID ${id} not found`
                 });
             }
-            res.json({
+            res.status(200).json({
                 Status: "Success",
                 Msg: "Transaction successfully updated",
                 Data: { id, type, category, amount, description }
@@ -141,7 +141,7 @@ const routes = (db) => {
                     Msg: `Transaction with ID ${id} not found`
                 });
             }
-            res.status(204).json({
+            res.status(200).json({
                 Status: "Success",
                 Msg: `Transaction id:${id} successfully deleted`
             });
@@ -163,7 +163,7 @@ const routes = (db) => {
                     SUM(amount) AS balance
                 FROM transactions
             `);
-            res.json({
+            res.status(200).json({
                 Status: "Success",
                 Msg: "Successfully fetched summary",
                 Data: summary

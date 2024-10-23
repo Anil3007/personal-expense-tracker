@@ -71,9 +71,11 @@ The application will start running on http://localhost:3000.
 Base URL
 http://localhost:3000/api/v1
 Authentication
-All endpoints require the user-id to be sent in the request headers for authentication.
+All endpoints require the user-id to be sent in the request headers for authentication.Please refer the below image.
+![alt text](image-2.png)
 
 1. Add a New Transaction
+![alt text](image.png)
 Endpoint: /transactions
 Method: POST
 Headers:
@@ -109,6 +111,7 @@ Response:
     "Msg": "Invalid transaction type"
     }
 2. Retrieve All Transactions
+![alt text](image-1.png)
 Endpoint: /transactions
 Method: GET
 Headers:
@@ -137,6 +140,7 @@ Response:
     "Msg": "Error retrieving transactions"
     }
 3. Retrieve a Transaction by ID
+![alt text](image-3.png)
 Endpoint: /transactions/:id
 Method: GET
 Headers:
@@ -162,6 +166,7 @@ Response:
     "Msg": "Transaction not found"
     }
 4. Update a Transaction by ID
+![alt text](image-4.png)
 Endpoint: /transactions/:id
 Method: PUT
 Headers:
@@ -195,6 +200,7 @@ Response:
     "Msg": "Transaction with ID 1 not found"
     }
 5. Delete a Transaction by ID
+![alt text](image-5.png)
 Endpoint: /transactions/:id
 Method: DELETE
 Headers:
@@ -213,6 +219,7 @@ Response:
     "Msg": "Transaction with ID 1 not found"
     }
 6. Retrieve Summary of Transactions
+![alt text](image-6.png)
 Endpoint: /summary
 Method: GET
 Headers:
